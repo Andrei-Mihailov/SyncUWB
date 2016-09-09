@@ -1,0 +1,20 @@
+function Search_Impuls(x)
+    %нашли обе 1
+%     if Receive_Sig(x) == 1%нашли вторую 1
+%         if Receive_Sig(x-1) == 1%нашли первую 1
+%           flag = 1;%поставили флаг
+%           Search_count = x-1;%и указатель на первую 1
+%         end
+%     end
+%     %нашли одну 1
+%     if x > 2
+%         if Receive_Sig(x) == 0
+%             if Receive_Sig(x-1) == 1%нашли вторую 1
+%               if Receive_Sig(x-2) == 0%и не нашли первую 1
+%                   flag = 1;%поставили флаг
+%                   Search_count = x-2;%полагаем что первая единица тут
+%               end
+%             end
+%         end
+%     end
+end

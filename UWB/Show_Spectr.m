@@ -1,0 +1,10 @@
+F = figure;
+set(F, 'Color', 'w');
+AX = axes;
+set(AX, 'FontName', 'Times New Roman', 'FontSize', 18);
+plot(f/(10^9), Spectr, '-k', 'LineWidth', 3);
+grid on;
+xlim([0 50]);
+ylim([-50 0]);
+xlabel('f, รร๖', 'FontName', 'Times New Roman', 'FontSize', 18);
+ylabel('G(f)/G(0), ไม', 'FontName', 'Times New Roman', 'FontSize', 18);
