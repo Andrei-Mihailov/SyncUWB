@@ -1,11 +1,11 @@
-function s = Receive_Signal(Signal)
+function [s, flag_out] = Receive_Signal(Signal, flag)
     count = 0;
     if flag == 0
         for x = 1:size(Signal, 2)
             if count == 3
                 count=0;
                 s(x) = 0;
-                Search_Impuls(s, x);
+                [strt, flag] = Search_Impuls(s, x);
             else if count < 3
                    count=count+1;
                    s(x) = Signal(x); 
@@ -22,6 +22,7 @@ function s = Receive_Signal(Signal)
              end
         end
     end
+   flag_out = flag;
 end
 
 

@@ -20,7 +20,7 @@ count=1;
 Sum = 0;
 flag = 0;
 count_T = 1;
-Receive_Sig = Receive_Signal(Signal);
+Receive_Sig = Receive_Signal(Signal, flag);
 % arr = ones (1, 60);
 for x = 1:size(Signal, 2)
     if flag == 1
@@ -32,7 +32,7 @@ for x = 1:size(Signal, 2)
             end
         end
     end
-    Search_count = Search_Impuls;
+%    Search_count = Search_Impuls;
 %      %нашли обе 1
 %     if Receive_Sig(x) == 1%нашли вторую 1
 %         if Receive_Sig(x-1) == 1%нашли первую 1

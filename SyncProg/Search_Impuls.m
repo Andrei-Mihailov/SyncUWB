@@ -1,5 +1,6 @@
-function strt = Search_Impuls(Receive_buf, x)
+function [strt, flag] = Search_Impuls(Receive_buf, x)
 Start_position = x - 3;
+strt = 0;
     %нашли обе 1
     if Receive_buf(Start_position) == 1%нашли первую 1
         if Receive_buf(Start_position+1) == 1%нашли вторую 1
