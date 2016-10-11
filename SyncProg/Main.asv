@@ -29,12 +29,13 @@ for SNR = SNR_arr
         Packet = [Packet_tmp; Packet_tmp];%2 строки
         Packet1 = [Packet; zeros(Q - N0, size(Packet, 2))];% +8 строк нулей
 
-%         Noise_signal = [];
+        Noise_signal = [];
         Noise_signal = awgn(Packet1,SNR-10*log10(Q)+10*log10(N0),'measured');
 %         Data_rec = Comparator(Noise_signal(1:2,:),1);
-%         Receive_Sig = [];
+        Receive_Sig = [];
         Receive_Sig = Receive(Noise_signal, Q,N_Data,L_preamble);
-
+%         Receive_Sig = reshape(Receive_Sig, Q, 3*N_Data);
+%         Receive_Data = Receive_Data(,start_pos,Q);
         Receive_Data = Receive_Sig(:,2001:end);
         Data_rec = Comparator(Receive_Data(1:2,:),1);
 % subplot(3,1,1);plot(Noise_signal, '-c'); xlabel('Noise_signal');
