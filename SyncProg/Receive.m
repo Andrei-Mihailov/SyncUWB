@@ -61,8 +61,9 @@ function signal = Receive(Noise_signal_input,Q,N_data,L_pr)
                 start_data = start_data + round((strt - start_data)/Q)*Q+factor*Q+1;
             end
             signal(Point(1):Point(c),size(Compare_signal,2)-N_data+1:end) = ...
-                Receive_Data(Compare_signal(Point(1):Point(c),size(Compare_signal,2)-N_data+1:end),...
-                start_data-size(Compare_signal,1)*size(Compare_signal,2)+Q*N_data);%,Q);
+                Compare_signal(Point(1):Point(c),mod(start_data,Q)+fix(start_data/Q):end);
+%                 Receive_Data(Compare_signal(Point(1):Point(c),size(Compare_signal,2)-N_data+1:end),...
+%                 start_data-size(Compare_signal,1)*size(Compare_signal,2)+Q*N_data);%,Q);
             break;
         end
     end

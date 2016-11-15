@@ -6,6 +6,7 @@ function data_signal = Receive_Data (Receive_buf, start_data)%, Q)
     for i = 1:size(Receive_buf, 1)
         data_signal(i,:) = Data_TX(start_data:end);
     end
+    
 %     end_data = start_data + 1;
     
 %     for counter = 0:999
